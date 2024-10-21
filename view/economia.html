@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-----------------------------------BOOTSTRAPP 5---------------------------------------------->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-----------------------------------BOOTSTRAPP 5---------------------------------------------->
+
+    <!-----------------------------------ANIMATE.STYLE---------------------------------------------->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-----------------------------------ANIMATE.STYLE---------------------------------------------->
+    <link rel="stylesheet" href="../css/Style.css">
+    <title>HENWARE</title>
+</head>
+
+<body class="bg-dark">
+    <!-- Centrar el logo -->
+    <div class="container d-flex justify-content-center align-items-center">
+        <a href="../index.html"><img src="../image/logoNofondo.png" alt="" class="img-fluid img-responsive-sm"></a>
+        <h1 id="section-title" class="fade-in">ECONOMÍA</h1>
+    </div>
+
+
+    <!-- Centrar el menú -->
+    <div class="container d-flex justify-content-center">
+        <ul class="d-flex flex-column flex-md-row justify-content-center align-items-center text-center">
+            <li>
+                <a class="menu avicultura" href="./avicultura.html" data-title="Avicultura">
+                    <span><span>Avicultura</span></span>
+                </a>
+            </li>
+            <li>
+                <a class="menu desarrollo " href="./desarrollo.html" data-title="Desarrollo">
+                    <span><span>Desarrollo</span></span>
+                </a>
+            </li>
+            <li>
+                <a class="menu economia" href="./economia.html" data-title="Economía">
+                    <span><span>Economía</span></span>
+                </a>
+            </li>
+            <li>
+                <a class="menu enfermedades" href="./enfermedades.html" data-title="Enfermedades">
+                    <span><span>Enfermedades</span></span>
+                </a>
+            </li>
+            <li>
+                <a class="menu tips" href="./tips.html" data-title="Tips">
+                    <span><span>Tips</span></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h1 class="text-center">Calculadoras Avícolas</h1>
+        <div class="row">
+            <!-- Calculadora de Alimentación -->
+            <div class="col-md-4 mb-5">
+                <div class="card">
+                    <div class="card-header">
+                        Cálculo de Alimentación
+                    </div>
+                    <div class="card-body">
+                        <form id="feeding-calculator-form">
+                            <div class="mb-3">
+                                <label for="numberOfHens" class="form-label">Número de Gallinas:</label>
+                                <input type="number" class="form-control" id="numberOfHens" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="feedPerHen" class="form-label">Cantidad de Alimento por Gallina (kg/día):</label>
+                                <input type="number" class="form-control" id="feedPerHen" step="0.01" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Calcular</button>
+                        </form>
+                        <div id="feed-result" class="result"></div>
+                    </div>
+                </div>
+            </div>
+
+           
+            <!-- Calculadora de Espacio Requerido -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        Cálculo de Espacio Requerido
+                    </div>
+                    <div class="card-body">
+                        <form id="space-calculator-form">
+                            <div class="mb-3">
+                                <label for="numberOfHensSpace" class="form-label">Número de Gallinas:</label>
+                                <input type="number" class="form-control" id="numberOfHensSpace" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="spacePerHen" class="form-label">Espacio por Gallina (m²):</label>
+                                <input type="number" class="form-control" id="spacePerHen" step="0.01" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Calcular</button>
+                        </form>
+                        <div id="space-result" class="result"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calculadora de Requisitos de Ventilación -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        Requisitos de Ventilación
+                    </div>
+                    <div class="card-body">
+                        <form id="ventilation-calculator-form">
+                            <div class="mb-3">
+                                <label for="numberOfHensVentilation" class="form-label">Número de Gallinas:</label>
+                                <input type="number" class="form-control" id="numberOfHensVentilation" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="airFlowPerHen" class="form-label">Flujo de Aire por Gallina (m³/h):</label>
+                                <input type="number" class="form-control" id="airFlowPerHen" step="0.01" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Calcular</button>
+                        </form>
+                        <div id="ventilation-result" class="result"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calculadora de Costos de Climatización -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        Costos de Climatización
+                    </div>
+                    <div class="card-body">
+                        <form id="climate-calculator-form">
+                            <div class="mb-3">
+                                <label for="powerConsumption" class="form-label">Consumo de Energía (kWh/día):</label>
+                                <input type="number" class="form-control" id="powerConsumption" step="0.01" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="costPerKWh" class="form-label">Costo por kWh:</label>
+                                <input type="number" class="form-control" id="costPerKWh" step="0.01" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Calcular</button>
+                        </form>
+                        <div id="climate-result" class="result"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calculadora de Reemplazo de Aves -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        Cálculo de Reemplazo de Aves
+                    </div>
+                    <div class="card-body">
+                        <form id="replacement-calculator-form">
+                            <div class="mb-3">
+                                <label for="initialHens" class="form-label">Número Inicial de Gallinas:</label>
+                                <input type="number" class="form-control" id="initialHens" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="replacementAge" class="form-label">Edad de Reemplazo (días):</label>
+                                <input type="number" class="form-control" id="replacementAge" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Calcular</button>
+                        </form>
+                        <div id="replacement-result" class="result"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calculadora de Mortalidad -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        Cálculo de Mortalidad
+                    </div>
+                    <div class="card-body">
+                        <form id="mortality-calculator-form">
+                            <div class="mb-3">
+                                <label for="totalHens" class="form-label">Número Total de Gallinas:</label>
+                                <input type="number" class="form-control" id="totalHens" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="mortalityRate" class="form-label">Tasa de Mortalidad (%)</label>
+                                <input type="number" class="form-control" id="mortalityRate" step="0.01" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Calcular</button>
+                        </form>
+                        <div id="mortality-result" class="result"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Alimentación
+        document.getElementById('feeding-calculator-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const numberOfHens = parseFloat(document.getElementById('numberOfHens').value);
+            const feedPerHen = parseFloat(document.getElementById('feedPerHen').value);
+            if (!isNaN(numberOfHens) && !isNaN(feedPerHen)) {
+                const totalFeed = numberOfHens * feedPerHen;
+                document.getElementById('feed-result').textContent = `Necesitas ${totalFeed.toFixed(2)} kg de alimento por día.`;
+            } else {
+                document.getElementById('feed-result').textContent = 'Por favor, ingresa valores válidos.';
+            }
+        });
+
+        // Costos de Alimentación
+        document.getElementById('cost-calculator-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const numberOfHens = parseFloat(document.getElementById('numberOfHensCost').value);
+            const feedPerHen = parseFloat(document.getElementById('feedPerHenCost').value);
+            const feedCost = parseFloat(document.getElementById('feedCost').value);
+            if (!isNaN(numberOfHens) && !isNaN(feedPerHen) && !isNaN(feedCost)) {
+                const totalFeed = numberOfHens * feedPerHen;
+                const totalCost = totalFeed * feedCost;
+                document.getElementById('cost-result').textContent = `El costo total del alimento por día es ${totalCost.toFixed(2)} unidades monetarias.`;
+            } else {
+                document.getElementById('cost-result').textContent = 'Por favor, ingresa valores válidos.';
+            }
+        });
+
+        // Espacio Requerido
+        document.getElementById('space-calculator-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const numberOfHens = parseFloat(document.getElementById('numberOfHensSpace').value);
+            const spacePerHen = parseFloat(document.getElementById('spacePerHen').value);
+            if (!isNaN(numberOfHens) && !isNaN(spacePerHen)) {
+                const totalSpace = numberOfHens * spacePerHen;
+                document.getElementById('space-result').textContent = `Necesitas ${totalSpace.toFixed(2)} m² de espacio.`;
+            } else {
+                document.getElementById('space-result').textContent = 'Por favor, ingresa valores válidos.';
+            }
+        });
+
+        // Requisitos de Ventilación
+        document.getElementById('ventilation-calculator-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const numberOfHens = parseFloat(document.getElementById('numberOfHensVentilation').value);
+            const airFlowPerHen = parseFloat(document.getElementById('airFlowPerHen').value);
+            if (!isNaN(numberOfHens) && !isNaN(airFlowPerHen)) {
+                const totalAirFlow = numberOfHens * airFlowPerHen;
+                document.getElementById('ventilation-result').textContent = `Necesitas un flujo de aire total de ${totalAirFlow.toFixed(2)} m³/h.`;
+            } else {
+                document.getElementById('ventilation-result').textContent = 'Por favor, ingresa valores válidos.';
+            }
+        });
+
+      
+
+        // Reemplazo de Aves
+        document.getElementById('replacement-calculator-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const initialHens = parseFloat(document.getElementById('initialHens').value);
+            const replacementAge = parseFloat(document.getElementById('replacementAge').value);
+            if (!isNaN(initialHens) && !isNaN(replacementAge)) {
+                const replacementsNeeded = initialHens / replacementAge;
+                document.getElementById('replacement-result').textContent = `Necesitarás reemplazar aproximadamente ${replacementsNeeded.toFixed(0)} aves.`;
+            } else {
+                document.getElementById('replacement-result').textContent = 'Por favor, ingresa valores válidos.';
+            }
+        });
+
+        // Mortalidad
+        document.getElementById('mortality-calculator-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const totalHens = parseFloat(document.getElementById('totalHens').value);
+            const mortalityRate = parseFloat(document.getElementById('mortalityRate').value);
+            if (!isNaN(totalHens) && !isNaN(mortalityRate)) {
+                const deaths = (totalHens * mortalityRate) / 100;
+                document.getElementById('mortality-result').textContent = `El número estimado de muertes es ${deaths.toFixed(0)}.`;
+            } else {
+                document.getElementById('mortality-result').textContent = 'Por favor, ingresa valores válidos.';
+            }
+        });
+    </script>
+    <script>
+        function changeTitle(newTitle) {
+            const titleElement = document.getElementById('section-title');
+            
+            // Aplicar fade-out antes de cambiar el contenido
+            titleElement.classList.add('fade-out');
+            
+            // Cambiar el título después de la animación de salida
+            setTimeout(() => {
+                titleElement.innerText = newTitle;
+                
+                // Aplicar fade-in después de cambiar el título
+                titleElement.classList.remove('fade-out');
+                titleElement.classList.add('fade-in');
+            }, 500); // La duración coincide con la transición en el CSS
+        }
+    </script>
+    
+    
+
+</body>
+
+</html>

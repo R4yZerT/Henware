@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-----------------------------------BOOTSTRAPP 5---------------------------------------------->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-----------------------------------BOOTSTRAPP 5---------------------------------------------->
+
+    <!-----------------------------------ANIMATE.STYLE---------------------------------------------->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-----------------------------------ANIMATE.STYLE---------------------------------------------->
+    <link rel="stylesheet" href="../css/Style.css">
+    <title>HENWARE</title>
+</head>
+
+<body class="bg-dark">
+    <!-- Centrar el logo -->
+    <div class="container d-flex justify-content-center align-items-center">
+        <a href="../index.html"><img src="../image/logoNofondo.png" alt="" class="img-fluid img-responsive-sm"></a>
+        <h1 id="section-title" class="fade-in">TIPS</h1>
+    </div>
+
+
+
+
+    <!-- Centrar el menú -->
+    <div class="container d-flex justify-content-center">
+        <ul class="d-flex flex-column flex-md-row justify-content-center align-items-center text-center">
+            <li>
+                <a class="menu avicultura" href="./avicultura.html" data-title="Avicultura">
+                    <span><span>Avicultura</span></span>
+                </a>
+            </li>
+            <li>
+                <a class="menu desarrollo " href="./desarrollo.html" data-title="Desarrollo">
+                    <span><span>Desarrollo</span></span>
+                </a>
+            </li>
+            <li>
+                <a class="menu economia" href="./economia.html" data-title="Economía">
+                    <span><span>Economía</span></span>
+                </a>
+            </li>
+            <li>
+                <a class="menu enfermedades" href="./enfermedades.html" data-title="Enfermedades">
+                    <span><span>Enfermedades</span></span>
+                </a>
+            </li>
+            <li>
+                <a class="menu tips" href="./tips.html" data-title="Tips">
+                    <span><span>Tips</span></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Columna para la imagen -->
+            <div class="col-md-6 img-container mb-3">
+                <img src="../image/img10.png" alt="Imagen" class="img-fluid">
+            </div>
+
+            <!-- Columna para el acordeón -->
+            <div class="col-md-6 acordeon-container mb-5">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Alimentación Adecuada:
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Balance Nutricional: Proporciona un alimento balanceado que incluya proteínas, vitaminas
+                                y minerales esenciales. Existen piensos formulados específicamente para cada tipo de ave
+                                y etapa de crecimiento.
+                            </div>
+                            <div class="accordion-body">
+                                Agua Limpia: Asegúrate de que siempre tengan acceso a agua limpia y fresca.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Mantenimiento del Espacio:
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Limpieza Regular: Mantén el espacio donde viven las aves limpio para evitar enfermedades.
+                            </div>
+                            <div class="accordion-body">
+                                Ventilación Adecuada: Asegúrate de que el lugar tenga una buena ventilación para prevenir la acumulación de humedad.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Control de Enfermedades:
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Vacunación: Asegúrate de vacunar a las aves según el calendario recomendado para prevenir enfermedades comunes.
+                            </div>
+                            <div class="accordion-body">
+                                Revisiones Veterinarias: Programa visitas regulares al veterinario para controlar la salud de las aves.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Reproducción:
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Condiciones de Cría: Proporciona un ambiente adecuado para la cría, incluyendo nidos y espacio suficiente.
+                            </div>
+                            <div class="accordion-body">
+                                Alimentación de los Polluelos: Asegúrate de que los polluelos reciban una alimentación adecuada para un buen crecimiento.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Socialización:
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Interacción: Dedica tiempo a interactuar con las aves para que se acostumbren a la presencia humana.
+                            </div>
+                            <div class="accordion-body">
+                                Comportamiento: Observa el comportamiento de las aves para identificar cualquier signo de estrés o agresión.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                Equipos y Herramientas:
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Herramientas Básicas: Ten a mano herramientas esenciales para el cuidado de las aves, como comederos y bebederos.
+                            </div>
+                            <div class="accordion-body">
+                                Mantenimiento de Equipos: Asegúrate de que todos los equipos estén en buen estado y realiza reparaciones cuando sea necesario.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <script>
+        function changeTitle(newTitle) {
+            const titleElement = document.getElementById('section-title');
+            
+            // Aplicar fade-out antes de cambiar el contenido
+            titleElement.classList.add('fade-out');
+            
+            // Cambiar el título después de la animación de salida
+            setTimeout(() => {
+                titleElement.innerText = newTitle;
+                
+                // Aplicar fade-in después de cambiar el título
+                titleElement.classList.remove('fade-out');
+                titleElement.classList.add('fade-in');
+            }, 500); // La duración coincide con la transición en el CSS
+        }
+    </script>
+    
+
+
+</body>
+
+</html>

@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Estilos globales */
+body {
+    background-color: #f4f4f9; /* Fondo gris claro para más legibilidad */
+    color: #333; /* Color de texto gris oscuro */
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: #002855; /* Azul oscuro profesional para títulos */
+}
+
+a {
+    color: #002855;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffd700; /* Color dorado al pasar el cursor */
+}
+
+/* Contenedor global */
+.container {
+    padding: 20px;
+}
+
+/* Logo centrado */
+.container img {
+    max-width: 180px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Estilos del menú */
+.nav {
+    background-color: #333; /* Fondo gris oscuro */
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-link {
+    color: #f5f5f5;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #ffd700; /* Efecto dorado al pasar el cursor */
+    color: #002855;
+    transform: scale(1.05); /* Agrandamiento suave */
+}
+
+/* Tarjetas de información */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+    color: #333;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 1.6rem;
+    color: #002855;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Menú personalizado */
+.menu {
+    display: block;
+    position: relative;
+    height: 76px;
+    width: 260px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.menu.avicultura {
+    border-top: #ffc000 0.3em solid;
+}
+
+/* Otros bordes de secciones */
+.menu.desarrollo {
+    border-top: #b81800 0.3em solid;
+}
+.menu.economia {
+    border-top: #050d7e 0.3em solid;
+}
+.menu.enfermedades {
+    border-top: #00a53c 0.3em solid;
+}
+.menu.tips {
+    border-top: #9600b4 0.3em solid;
+}
+
+/* Efecto hover y despliegue */
+.menu > span {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    transition: 0.5s ease-in-out;
+}
+
+.menu:after,
+.menu > span > span {
+    display: block;
+    text-align: center;
+    border-radius: 0em;
+    padding: 2em 0 1.5em;
+}
+
+.menu:after {
+    content: attr(data-title);
+    width: 100%;
+    background: #000;
+    color: #fff;
+}
+
+.menu > span > span {
+    width: 260px;
+    color: #fff;
+}
+
+.menu:hover > span {
+    height: 100%;
+}
+
+/* Responsive para dispositivos móviles */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+    }
+    .nav-link {
+        margin-bottom: 10px;
+    }
+}
+
+/* Animaciones dinámicas */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+}
+.nav {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center; /* Asegura que los elementos estén centrados */
+  align-items: center; /* Alinea los elementos verticalmente */
+  gap: 10px; /* Añade espacio entre los elementos */
+}
+.nav {
+  overflow: hidden;
+}
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+.card-title {
+  font-size: 1.4rem;
+  color: #ffffff;
+  background: linear-gradient(to right, #ffd900, #ffa07a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+#section-title {
+  height: 50px; /* Puedes ajustar la altura según sea necesario */
+  line-height: 50px;
+  transition: opacity 0.5s ease-in-out;
+}
+
